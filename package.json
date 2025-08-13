@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://duy275.github.io/test",
+  "homepage": "https://duy275.github.io/testing",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
