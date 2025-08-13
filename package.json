@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://duy275.github.io/testing",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -29,8 +28,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "lint": "eslint ."
   }
 }
