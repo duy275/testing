@@ -1,0 +1,137 @@
+@import "../../styles/variables.scss";
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    background-color: #F0F7F7;
+    padding: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+
+    .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .sidebar-logo {                
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+
+        .sidebar-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            gap: 5px;
+
+            .sidebar-menu-item {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                border-radius: 50%;
+                background-color: $second-dominant-color;
+                transition: 
+                    background-color 0.25s cubic-bezier(0.4,0,0.2,1),
+                    transform 0.25s cubic-bezier(0.4,0,0.2,1);
+
+                img {
+                    width: 22px;
+                    height: 22px;
+                    object-fit: contain;
+                    transition: filter 0.25s cubic-bezier(0.4,0,0.2,1);
+                }
+
+                &:hover {
+                    background-color: $accent-color;
+                    border-radius: 50%;
+                    
+                    img {
+                        filter: invert(0.9);
+                    }
+                }
+            }
+
+            .sidebar-menu-item.active {
+                background-color: $accent-color;
+                color: $complementary-color;
+                border-radius: 50%;
+                transform: scale(1.1); // Phóng to hơn một chút
+
+                img {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+
+    .sidebar-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+
+        .sidebar-footer-avatar {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .sidebar-footer-logout {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            img {
+                width: 22px;
+                height: 22px;
+                object-fit: contain;
+            }
+
+            &:hover {
+                background-color: $second-dominant-color;
+                border-radius: 50%;
+            }
+        }
+    }
+}
